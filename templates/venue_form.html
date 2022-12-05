@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>New Venue Request Form</h1>
+<form action="/new-venue/" method="post">
+    <label for="venue_name">Venue Name</label>
+    <input id="venue_name" type="text" name="venue_name">
+    <label for="venue_address">Venue Address</label>
+    <input id="venue_address" type="textbox" name="venue_address">
+    <p></p>
+    <label for="freeform">Please tell us about your venue and what type of events you host</label>
+    <textarea id="freeform" name="freeform" rows="4" cols="50"></textarea>
+    <input type="submit" href="{% 'new-venue' % }" value="Submit" />
+</form>
+
+{% endblock %}
